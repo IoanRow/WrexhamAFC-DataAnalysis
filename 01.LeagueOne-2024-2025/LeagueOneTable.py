@@ -19,20 +19,20 @@ def DisplayResults(t):
 url_df = 'https://fbref.com/en/comps/15/League-One-Stats'
 
 # Read and get league table
+
+
 df = pd.read_html(url_df)[0]
 print (df)
 
 # loop through the rows using iterrows()
 
 # Get team at the top of the table
-#team = df.iloc[0]
-#DisplayResults(team)
+team = df.iloc[0]
+DisplayResults(team)
 
 # Get Wrexham from dataframe
 
-df.set_index('squad')
-wrexham = df.loc[df['Squad'] == 'Wrexham']
-
-print(wrexham)
-
+#df.set_index('squad')
+#wrexham = df.loc[df['Wrexham']]
+#print(wrexham)
 #DisplayResults(wrexham)
